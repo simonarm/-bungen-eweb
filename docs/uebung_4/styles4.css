@@ -1,0 +1,21 @@
+#character {
+  height: 240px;
+  width: 160px;
+  background: url("character_idle.png");
+}
+
+.walk {
+  animation: walk 1s linear infinite;
+}
+
+@keyframes walk {
+  0% {
+    background: url("character_left.png");
+  }
+  50% {
+    background: url("character_right.png");
+  }
+  100% {
+    background: url("character_left.png");
+  }
+}

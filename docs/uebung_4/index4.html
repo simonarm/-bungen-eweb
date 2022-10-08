@@ -1,0 +1,21 @@
+<head>
+  <title>Uebung 4</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles4.css" />
+</head>
+<body>
+  <div id="character"></div>
+  <button id="button">Walk</button>
+</body>
+
+<script>
+  button = document.getElelmentById("button");
+  button.addEventListener("click", () => {
+    document.getElelmentById("character").classList.toggle("walk");
+    if (button.innerText === "Walk") {
+      button.innerText = "Stop";
+    } else {
+      button.innerText = "Walk";
+    }
+  });
+</script>
