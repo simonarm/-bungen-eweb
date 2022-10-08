@@ -1,0 +1,68 @@
+.outer {
+  background-color: aliceblue;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.outer > div {
+  height: 50px;
+  width: 50px;
+}
+
+.scale {
+  background-color: cadetblue;
+  position: absolute;
+  top: 10%;
+  animation: scale 3s linear forwards infinite;
+}
+
+.rotate {
+  background-color: greenyellow;
+  position: absolute;
+  top: 70%;
+  animation: rotate 3s linear forwards infinite;
+}
+
+.move {
+  background-color: red;
+  position: absolute;
+  top: 40%;
+  animation: move 3s linear forwards infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: calc(100% - 60px);
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 2;
+  }
+  100% {
+    scale: 1;
+  }
+}
